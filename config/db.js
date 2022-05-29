@@ -1,5 +1,10 @@
+require("dotenv").config();
+// console.log("PROCESS.ENV >>>>>", process.env);
+
 const { Sequelize } = require("sequelize");
-const sequelize = new Sequelize("<REPLACE THIS WITH YOUR HEROKU POSTGRESQL URI>", {
+const db = process.env.DATABASE_URL || "http://localhost:3000/";
+
+const sequelize = new Sequelize(db, {
   dialect: "postgres",
   dialectOptions: {
     ssl: {
