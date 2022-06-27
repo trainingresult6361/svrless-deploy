@@ -1,0 +1,27 @@
+** NO CICD
+
+Heroku App
+Heroku collaborators
+	($ heroku auth:whoami)
+Heroku Postgres
+Heroku Database Credentials
+Setup PGAdmin
+Connect GIT to HEROKU
+	($ git remote -v)
+Initial deployment to Heroku
+	($ git push heroku main)
+Check endpoints
+
+
+Alter config/db.js
+Alter server.js
+Alter package.json
+
+
+If any new files to Github
+Push to Heroku again!
+Check endpoints
+
+Errors
+	($ heroku restart) - sometimes app gets stuck, restart all all dynos
+	($ heroku logs --tail) - checks your error to debug

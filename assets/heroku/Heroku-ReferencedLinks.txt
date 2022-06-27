@@ -1,0 +1,55 @@
+
+-----------------------------------------------------------------------------------
+
+REFERENCED LINKS
+
+
+Setup Heroku Postgresql (Add-on)
+https://dev.to/prisma/how-to-setup-a-free-postgresql-database-on-heroku-1dc1
+
+
+Connect to Heroku Postgresql via CLI
+https://medium.com/@kagaramag/how-to-connect-to-heroku-postgres-database-using-cli-a2e51cc25029
+
+
+Browsing database via PGADMIN4
+https://stackoverflow.com/questions/20410873/how-can-i-browse-my-heroku-database
+
+
+Deployment to Heroku via CLI / Git
+https://stackoverflow.com/questions/71892543/heroku-and-github-items-could-not-be-retrieved-internal-server-error
+https://devcenter.heroku.com/articles/git
+
+
+Deployment to Heroku via UI / Github (Currently DEFUNCT until safety issues are fixed)
+https://www.freecodecamp.org/news/how-to-deploy-a-nodejs-app-to-heroku-from-github-without-installing-heroku-on-your-machine-433bec770efe/
+
+
+Connecting from ./config/db.js
+https://sequelize.org/docs/v6/getting-started/
+https://stackoverflow.com/questions/25000183/node-js-postgresql-error-no-pg-hba-conf-entry-for-host
+https://stackoverflow.com/questions/58965011/sequelizeconnectionerror-self-signed-certificate
+
+
+Error when deploying to HEROKU, after already deployed another set of codes before
+https://docs.github.com/en/get-started/using-git/dealing-with-non-fast-forward-errors
+
+
+Resetting HEROKU app
+https://stackoverflow.com/questions/6104258/how-to-reset-heroku-app-and-re-commit-everything
+
+
+HEROKU application error
+https://help.heroku.com/UMAUQ4UF/why-am-i-seeing-application-error
+https://github.com/keystonejs/keystone-classic/issues/3994
+https://stackoverflow.com/questions/15693192/heroku-node-js-error-web-process-failed-to-bind-to-port-within-60-seconds-of
+
+
+Other Issues Encountered/Researched
+https://stackoverflow.com/questions/47106596/unable-to-create-database-postgresql-on-heroku-hobby-database
+https://stackoverflow.com/questions/71892543/heroku-and-github-items-could-not-be-retrieved-internal-server-error
+https://blog.heroku.com/six-strategies-deploy-to-heroku
+https://stackoverflow.com/questions/57190680/how-to-check-with-which-heroku-account-i-am-currently-logged-in
+
+
+-----------------------------------------------------------------------------------

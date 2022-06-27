@@ -1,0 +1,123 @@
+REFERENCE LINKS TO CONNECT GIT TO HEROKU APP
+https://f-a.nz/dev/update-deploy-to-heroku-app/
+
+---------------------------------------------------------------------------------
+
+
+** Below workflow assumes user has:
+1) Already setup HEROKU CLI
+2) Already logged in
+3) Is working inside your project folder
+4) Your changes have already been pulled into main branch
+
+
+** To check if logged in on HEROKU, with:
+
+IN CLI >>> 
+$ heroku auth:whoami
+
+CLI RETURNS >>>
+Displays email you've used for Heroku account.
+
+
+---------------------------------------------------------------------------------
+
+
+1) In your local proj repo, to connect GIT to HEROKU
+
+IN CLI >>> 
+$ heroku git:remote -a <your-heroku-app>
+
+(example) 
+$ heroku git:remote -a ptesttt
+
+CLI RETURNS (example) >>>
+set git remote heroku to https://git.heroku.com/ptesttt.git
+
+
+---------------------------------------------------------------------------------
+
+
+2) If you have connected your GIT to HEROKU, it returns at least 4 lines instead of the usual 2
+
+IN CLI >>> 
+$ git remote -v
+
+CLI RETURNS (example) >>>
+heroku  https://git.heroku.com/ptesttt.git (fetch)
+heroku  https://git.heroku.com/ptesttt.git (push)
+origin  https://github.com/trainingresult6361/ptesttt.git (fetch)
+origin  https://github.com/trainingresult6361/ptesttt.git (push) 
+
+---------------------------------------------------------------------------------
+
+
+3) For any new updates to remote repo (Github):
+** Note: Pull requests to main branch.
+
+STAGE 
+COMMIT 
+PUSH
+
+
+IN CLI >>> 
+$ git add * OR . OR <specific-files-or-directories>
+$ git commit -m "<your-commit-message>"
+$ git push origin <your_branch_name>
+
+ON GITHUB >>> 
+Merge your pull requests from your branch to main branch.
+
+
+---------------------------------------------------------------------------------
+
+
+4) To deploy/update to HEROKU app, after updating GITHUB via GIT
+(no CICD for now)
+
+
+IN CLI >>> 
+$ git checkout main
+
+$ git push heroku main
+
+** Where main is the branch name to push to Heroku
+
+CLI RETURNS (example) >>>
+Enumerating objects: 28, done.
+Counting objects: 100% (28/28), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (23/23), done.
+Writing objects: 100% (28/28), 50.10 KiB | 5.57 MiB/s, done.
+Total 28 (delta 3), reused 6 (delta 0), pack-reused 0
+remote: Compressing source files... done.
+. 
+. 
+.
+.
+.
+.
+other lines run here
+other lines run here
+other lines run here
+.
+.
+.
+.
+.
+.
+remote: -----> Build succeeded!
+remote: -----> Discovering process types
+remote:        Procfile declares types     -> (none)
+remote:        Default types for buildpack -> web
+remote:
+remote: -----> Compressing...
+remote:        Done: 35.7M
+remote: -----> Launching...
+remote:        Released v9
+remote:        https://ptesttt.herokuapp.com/ deployed to Heroku
+remote:
+remote: Verifying deploy... done.
+To https://git.heroku.com/ptesttt.git
+ + 0e06098...d6c81a6 main -> main 
+---------------------------------------------------------------------------------
