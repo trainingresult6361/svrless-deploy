@@ -16,6 +16,9 @@ https://f-a.nz/dev/update-deploy-to-heroku-app/
 IN CLI >>> 
 $ heroku auth:whoami
 
+TO LOGIN >>>
+$ heroku login -i
+
 CLI RETURNS >>>
 Displays email you've used for Heroku account.
 
